@@ -1,0 +1,76 @@
+.flex {
+    display: flex;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.text-white {
+    color: white;
+}
+
+.my-container {
+    flex-direction: column-reverse;
+}
+
+header {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    height: 100px;
+    background-color: blue;
+    padding: 8px;
+
+}
+
+header > div {
+    height: 90px;
+    background-color: green;
+}
+
+.bar-side {
+    flex-basis: 200px;
+    flex-shrink: 0;
+}
+
+.bar-side .container-img {
+    height: 50px;
+}
+
+.title-bar-side {
+    padding: 8px;
+}
+
+.bar-side a {
+    text-decoration: none;
+    color: gray;
+    padding: 4px;
+}
+
+.bar-side img {
+    height: 100%;
+}
+
+.bar-side h5,
+.bar-side h6 {
+    margin: 0;
+}
+
+
+
+.bar-center {
+    flex-basis: 400px;
+    flex-shrink: 1;
+    border: 1px solid black;
+}
+
+main {
+    height: calc(100vh - 70px);
+    background-color: yellow;
+}
+
+aside, section {
+    width: 50%;
+    height: calc(100vh - 70px);
+    border: 1px solid black;
+}
