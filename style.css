@@ -1,3 +1,7 @@
+/* html {
+    font-family: 'Roboto', sans-serif;
+} */
+
 /* utility */
 
 .flex {
@@ -111,6 +115,7 @@ header .bar-center {
 .time-progress-bar {
     flex-shrink: 0;
     padding: 0 8px;
+    font-size: 10px;
 }
 
 aside .progress-bar {
@@ -151,6 +156,7 @@ aside {
     flex-wrap: nowrap;
     padding: 15px 8px 8px 8px;
     background-color: black;
+    overflow: hidden;
 }
 
 /* aside-logo */
