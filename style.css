@@ -1,3 +1,5 @@
+/* utility */
+
 .flex {
     display: flex;
 }
@@ -14,26 +16,34 @@
     color: gray;
 }
 
-.my-container {
-    flex-direction: column;
-}
-
 a:hover {
     color: white;
+    text-decoration: none;
 }
 
 .padding-0 {
     padding: 0;
 }
 
-/* bar */
+.padding-8{
+    padding: 8px 0;
+}
 
+.progress-bar {
+    height: 5px;
+    border-radius: 5px;
+    background-color: gray;
+    flex-grow: 1;
+    position: relative;
+}
+
+/* bar */
 header {
     flex-wrap: nowrap;
     justify-content: space-between;
     height: 70px;
-    background-color: black;
-    padding: 0 8px;
+    background-color: rgb(40, 40, 40);
+    /* padding: 0 8px; */
 }
 
 header a {
@@ -41,13 +51,12 @@ header a {
     text-decoration: none;
 }
 
-
-
 /* bar-side */
 header .bar-side {
-    flex-basis: 200px;
+    flex-basis: 220px;
     flex-shrink: 0;
     align-items: center;
+    padding: 0 8px;
 }
 
 header .bar-side .container-img {
@@ -88,7 +97,6 @@ header .bar-side h6 {
 header .bar-center {
     flex-basis: 400px;
     flex-shrink: 1;
-    border: 1px solid black;
 }
 
 .bar-center .container-btn {
@@ -105,13 +113,8 @@ header .bar-center {
     padding: 0 8px;
 }
 
-header .progress-bar {
-    height: 5px;
-    border-radius: 5px;
-    background-color: gray;
+aside .progress-bar {
     width: 50px;
-    flex-grow: 1;
-    position: relative;
 }
 
 header .progress-bar .my-progress {
@@ -119,7 +122,6 @@ header .progress-bar .my-progress {
     width: 15%;
     background-color: rgb(199, 195, 195);
     border-radius: 5px;
-
 }
 
 .circle-progress {
@@ -141,13 +143,92 @@ header .progress-bar .my-progress {
     display: block;
 }
 
+/* aside */
+aside {
+    width: 220px;
+    height: calc(100vh - 70px);
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 15px 8px 8px 8px;
+    background-color: black;
+}
+
+/* aside-logo */
+aside .container-logo {
+    width: 60%;
+    flex-shrink: 0;
+    padding-bottom: 20px;
+}
+
+aside .container-logo img {
+    width: 100%;
+}
+
+/* aside-menu */
+aside .menu {
+    flex-shrink: 0;    
+}
+
+aside .menu .home,
+aside .menu .search,
+aside .menu .library {
+    padding: 4px 0;
+}
+
+aside .menu a i,
+aside .playlist a i,
+aside .install a i {
+    margin-right: 4px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* aside-playlist */
+aside .playlist {
+    flex-grow: 1;
+    flex-direction: column;
+    overflow: scroll;
+}
+
+aside .playlist a i {
+    vertical-align: middle;
+    display: inline-block;
+}
+
+aside .playlist a span {
+    font-size: 16px;
+}
+
+/* aside-utent */
+aside .utent {
+    flex-shrink: 0;   
+}
+
+.utent .install {
+    flex-shrink: 0;
+    flex-direction: column;
+}
+
+.utent .install .progress-bar {
+    width: 100%;
+    align-self: center;
+    margin: 10px 0;
+    height: 2px;
+}
+
+/* section */
+
+.my-container {
+    flex-direction: column;
+}
+
 main {
     height: calc(100vh - 70px);
     background-color: yellow;
 }
 
-aside, section {
-    width: 50%;
+section {
+    width: calc(100vw - 220px);
     height: calc(100vh - 70px);
     border: 1px solid black;
 }
