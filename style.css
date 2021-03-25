@@ -25,7 +25,9 @@ body {
     color: gray;
 }
 
-a:hover {
+.hover-white:hover a,
+a:hover,
+.hover-white:hover span {
     color: white;
     text-decoration: none;
 }
@@ -38,8 +40,8 @@ a:hover {
     padding: 8px 0;
 }
 
-.padding-15 {
-    padding: 15px;
+.margin-btn10 {
+    margin-bottom: 10px;
 }
 
 .my-progress-bar {
@@ -207,16 +209,15 @@ aside {
 
 aside .container-icon {
     width: 30px;
-    /* height: 30px; */
 }
 
 aside .container-icon svg {
-    max-width: 100%;
+    width: 100%;
 }
 
 aside .download .container-icon {
     width: 20px;
-    /* height: 20px; */
+    height: 20px;
 }
 
 aside .user .container-icon {
@@ -269,6 +270,12 @@ aside .utent {
 
 aside .download {
     margin: 10px 0;
+    height: 20px;
+    line-height: 20px;
+}
+
+aside .download svg {
+    width: 20px;
 }
 
 aside .user {
@@ -295,7 +302,6 @@ section {
     section {
     width: calc(100vw - 70px);
     }
-
 }
 
 /* upgrade */
@@ -374,10 +380,9 @@ section {
 
 .content .my-row .card {
     flex-basis: calc(100% / 6 - 10px);
-    text-align: center;
-    margin-left: 5px;
-    margin-right: 5px;
-    margin-bottom: 20px;
+    align-items: flex-start;
+    text-align: center; 
+    margin: 10px 5px 20px 5px; 
 }
 
 @media all and (max-width: 991px) {
@@ -393,15 +398,18 @@ section {
 }
 
 .content .my-row .card .container-img {
-    position: relative;
-    margin-top: 10px;   
+    position: relative; 
 }
 
 .content .my-row .card img {
     width: 100%;
 }
 
-.my-row a.card:hover .hover-play {
+.content .my-row .card h6 {
+    margin-bottom: 0;
+}
+
+.my-row .card:hover .hover-play {
     display: block;
 }
 
