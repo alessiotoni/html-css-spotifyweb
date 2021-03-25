@@ -56,6 +56,9 @@ a:hover {
     font-weight: 500;
 }
 
+.circle {
+    border-radius: 50%;
+}
 
 /* bar */
 header {
@@ -148,7 +151,6 @@ header .progress-bar .my-progress {
 .circle-progress {
     height: 15px;
     width: 15px;
-    border-radius: 50%;
     background-color: white;
     position: absolute;
     left: 12%;
@@ -275,6 +277,14 @@ section {
     padding: 8px 15px;
 }
 
+/* content-section */
+
+.content-section {
+    height: calc(100vh - 70px - 70px);
+    padding: 15px;
+    flex-direction: column;
+}
+
 /* nav  */
 
 .nav ul {
@@ -299,23 +309,45 @@ section {
 
 /* content */
 
-.content h4 {
-    margin: 15px 0 10px 0;
+.content {
+    overflow: scroll;
 }
 
+.content h4 {
+    margin: 15px 0;
+}
+
+/* row */
 .content .my-row {
-    /* height: 200px; */
-    /* background-color: yellow; */
-    justify-content: space-between;
+    justify-content: start;
+    flex-wrap: wrap;
+    /* margin-left: -5px;
+    margin-right: -5px; */
 }
 
 .content .my-row .card {
     flex-basis: calc(100% / 6 - 10px);
     text-align: center;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 20px;
+}
+
+@media all and (max-width: 991px) {
+    .content .my-row .card {
+        flex-basis: calc(100% / 4 - 10px);
+    }
+}
+
+@media all and (max-width: 767px) {
+    .content .my-row .card {
+        flex-basis: calc(100% / 2 - 10px);
+    }
 }
 
 .content .my-row .card .container-img {
-    position: relative;   
+    position: relative;
+    margin-top: 10px;   
 }
 
 .content .my-row .card img {
@@ -340,5 +372,9 @@ section {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50% -50%);
+    transform: translate(-50%, -50%);
+}
+
+.container-img.circle {
+    overflow: hidden;
 }
