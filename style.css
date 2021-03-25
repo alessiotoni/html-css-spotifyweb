@@ -409,7 +409,7 @@ section {
     margin-bottom: 0;
 }
 
-.my-row .card:hover .hover-play {
+.hover-card:hover .hover-play {
     display: block;
 }
 
