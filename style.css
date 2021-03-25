@@ -162,8 +162,9 @@ header .progress-bar .my-progress {
     width: 15px;
     background-color: white;
     position: absolute;
-    left: 12%;
+    left: 15%;
     top: -5px;
+    transform: translateX(-50%);
     display: none;
 }
 
@@ -188,7 +189,7 @@ aside {
 
 @media all and (max-width: 767px) {
     aside {
-        width: 50px;
+        width: 70px;
         align-items: center;
         text-align: center;
     }
@@ -197,7 +198,27 @@ aside {
         margin-bottom: 10px;
     }
 
+    .dowload {
+        margin-bottom: 10px;
+    }
+
 }
+
+aside .container-icon {
+    width: 30px;
+    height: 30px;
+}
+
+aside .container-icon svg {
+    max-width: 100%;
+}
+
+aside .install .container-icon {
+    width: 20px;
+    height: 20px;
+}
+
+
 
 /* aside-logo */
 aside .container-logo {
@@ -208,6 +229,10 @@ aside .container-logo {
 
 aside .container-logo img {
     width: 100%;
+}
+
+.logo-small {
+    width: 35px;
 }
 
 /* aside-menu */
@@ -265,7 +290,7 @@ section {
 
 @media all and (max-width: 767px) {
     section {
-    width: calc(100vw - 50px);
+    width: calc(100vw - 70px);
     }
 
 }
@@ -335,11 +360,15 @@ section {
 }
 
 /* row */
+.container-row {
+    overflow: hidden;
+}
+
 .content .my-row {
     justify-content: start;
     flex-wrap: wrap;
-    /* margin-left: -5px;
-    margin-right: -5px; */
+    margin-left: -5px;
+    margin-right: -5px;
 }
 
 .content .my-row .card {
