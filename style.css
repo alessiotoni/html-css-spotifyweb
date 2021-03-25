@@ -7,9 +7,7 @@ body {
     flex-direction: column-reverse;
 }
 
-
 /* utility */
-
 .flex {
     display: flex;
 }
@@ -125,6 +123,17 @@ header .bar-center {
 .bar-center .container-btn {
     justify-content: center;
     align-items: center;
+    height: 42px;
+    text-align: center;
+}
+
+.bar-center .container-btn .fa-play-circle-o {
+    width: 30px;
+    height: 15px;
+}
+
+a.play:hover i.fa-play-circle-o {
+    font-size: 30px;
 }
 
 .container-progress-bar {
@@ -248,7 +257,6 @@ aside .utent {
 }
 
 /* section */
-
 section {
     width: calc(100vw - 210px);
     height: calc(100vh - 70px);
@@ -263,22 +271,29 @@ section {
 }
 
 /* upgrade */
-
 .upgrade {
-    padding: 15px 4px 20px 0;
     background-color: rgb(8, 11, 17);
+    height: 70px;
+    position: relative;
 }
 
 .upgrade button {
-    float: right;
     background-color: transparent;
     border: 1px solid white;
     border-radius: 50px;
     padding: 8px 15px;
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
-/* content-section */
+.upgrade button:hover {
+    font-size: 14px;
+}
 
+
+/* content-section */
 .content-section {
     height: calc(100vh - 70px - 70px);
     padding: 15px;
@@ -286,6 +301,9 @@ section {
 }
 
 /* nav  */
+.nav {
+    margin-bottom: 5px;
+}
 
 .nav ul {
     text-align: center;
@@ -308,7 +326,6 @@ section {
 }
 
 /* content */
-
 .content {
     overflow: scroll;
 }
@@ -353,7 +370,6 @@ section {
 .content .my-row .card img {
     width: 100%;
 }
-
 
 .my-row a.card:hover .hover-play {
     display: block;
