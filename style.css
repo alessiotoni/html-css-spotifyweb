@@ -1,7 +1,10 @@
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 12px;
+}
 
+.my-container {
+    flex-direction: column-reverse;
 }
 
 
@@ -226,28 +229,29 @@ aside .utent {
     flex-direction: column;
 }
 
+.utent .install:first-child a {
+    padding-top: 8px;
+    margin-top: 5px;
+}
+
 .utent .install .progress-bar {
     width: 100%;
     align-self: center;
     margin: 10px 0;
-    height: 2px;
+    height: 1px;
 }
 
 /* section */
 
-.my-container {
-    flex-direction: column;
-}
-
 section {
     width: calc(100vw - 210px);
     height: calc(100vh - 70px);
+    background-color: rgb(21, 25, 32);
 }
 
 @media all and (max-width: 767px) {
     section {
     width: calc(100vw - 50px);
-    background-color: green;
     }
 
 }
@@ -265,4 +269,30 @@ section {
     border: 1px solid white;
     border-radius: 50px;
     padding: 8px 15px;
+}
+
+/* nav  */
+
+.nav {
+    padding: 15px;
+}
+
+.nav ul {
+    text-align: center;
+    margin: 0;
+}
+
+.nav ul li {
+    margin: 0 5px;
+    padding: 5px;
+    display: inline-block;
+}
+
+.nav .progress-bar {
+    width: 30px;
+    height: 2px;
+    background-color: rgb(200, 255, 95);
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
 }
