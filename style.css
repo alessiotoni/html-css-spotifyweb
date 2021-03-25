@@ -207,7 +207,7 @@ aside {
 
 aside .container-icon {
     width: 30px;
-    height: 30px;
+    /* height: 30px; */
 }
 
 aside .container-icon svg {
@@ -216,7 +216,11 @@ aside .container-icon svg {
 
 aside .download .container-icon {
     width: 20px;
-    height: 20px;
+    /* height: 20px; */
+}
+
+aside .user .container-icon {
+    height: 30px;
 }
 
 /* aside-logo */
