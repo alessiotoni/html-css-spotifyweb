@@ -42,7 +42,7 @@ a:hover {
     padding: 15px;
 }
 
-.progress-bar {
+.my-progress-bar {
     height: 5px;
     border-radius: 5px;
     background-color: gray;
@@ -56,6 +56,7 @@ a:hover {
 
 .circle {
     border-radius: 50%;
+    overflow: hidden;
 }
 
 /* bar */
@@ -146,11 +147,11 @@ a.play:hover i.fa-play-circle-o {
     font-size: 10px;
 }
 
-aside .progress-bar {
+aside .my-progress-bar {
     width: 50px;
 }
 
-header .progress-bar .my-progress {
+header .my-progress-bar .my-progress {
     height: 5px;
     width: 15%;
     background-color: rgb(199, 195, 195);
@@ -168,11 +169,11 @@ header .progress-bar .my-progress {
     display: none;
 }
 
-.progress-bar:hover .my-progress {
+.my-progress-bar:hover .my-progress {
     background-color: rgb(9, 221, 9);
 }
 
-.progress-bar:hover .circle-progress {
+.my-progress-bar:hover .circle-progress {
     display: block;
 }
 
@@ -213,12 +214,10 @@ aside .container-icon svg {
     max-width: 100%;
 }
 
-aside .install .container-icon {
+aside .download .container-icon {
     width: 20px;
     height: 20px;
 }
-
-
 
 /* aside-logo */
 aside .container-logo {
@@ -264,21 +263,21 @@ aside .utent {
     flex-shrink: 0;   
 }
 
-.utent .install {
-    flex-shrink: 0;
-    flex-direction: column;
-}
-
-.utent .install a:first-child {
-    padding-top: 8px;
-    margin-top: 5px;
-}
-
-.utent .install .progress-bar {
-    width: 100%;
-    align-self: center;
+aside .download {
     margin: 10px 0;
+}
+
+aside .user {
+    margin-top: 10px;
+}
+
+.utent .my-progress-bar {
+    width: 100%;
     height: 1px;
+}
+
+.user .circle {
+    background-color: grey;
 }
 
 /* section */
@@ -317,7 +316,6 @@ section {
     font-size: 14px;
 }
 
-
 /* content-section */
 .content-section {
     height: calc(100vh - 70px - 70px);
@@ -326,28 +324,27 @@ section {
 }
 
 /* nav  */
-.nav {
+.my-navbar {
     margin-bottom: 5px;
 }
 
-.nav ul {
+.my-navbar ul {
     text-align: center;
     margin: 0;
 }
 
-.nav ul li {
-    margin: 0 5px;
+.my-navbar ul li {
+    /* margin: 0 5px; */
     padding: 5px;
     display: inline-block;
+    vertical-align: top;
 }
 
-.nav .progress-bar {
+.my-navbar .my-progress-bar {
     width: 30px;
     height: 2px;
     background-color: rgb(200, 255, 95);
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
+    margin: auto;
 }
 
 /* content */
@@ -418,8 +415,4 @@ section {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-}
-
-.container-img.circle {
-    overflow: hidden;
 }
