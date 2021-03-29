@@ -53,7 +53,6 @@ header {
     justify-content: space-between;
     height: 70px;
     background-color: rgb(40, 40, 40);
-    /* padding: 0 8px; */
 }
 
 header a {
@@ -177,7 +176,6 @@ aside {
     flex-wrap: nowrap;
     padding: 8px;
     background-color: black;
-    overflow: hidden;
 }
 
 @media all and (max-width: 767px) {
@@ -194,7 +192,6 @@ aside {
     .dowload {
         margin-bottom: 10px;
     }
-
 }
 
 aside a, aside span {
@@ -211,6 +208,7 @@ aside .container-icon svg {
 
 aside .playlist > a {
     padding: 8px 0;
+    display: block;
 }
 
 aside .download .container-icon {
@@ -257,8 +255,7 @@ aside .install a span {
 /* aside-playlist */
 aside .playlist {
     flex-grow: 1;
-    flex-direction: column;
-    overflow: scroll;
+    overflow: auto;
 }
 
 /* aside-utent */
