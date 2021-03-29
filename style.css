@@ -86,8 +86,7 @@ header .bar-side .title-bar-side a {
     padding: 0;
 }
 
-header .bar-side h5,
-header .bar-side h6 {
+header .bar-side h5, header .bar-side h6 {
     margin: 0;
 }
 
@@ -197,6 +196,12 @@ aside {
 
 }
 
+@media all and (max-width: 374px) {
+    header a {
+        padding: 8px 1px;
+    }
+}
+
 aside a, aside span {
     font-weight: 500;
 }
@@ -242,15 +247,11 @@ aside .menu {
     flex-shrink: 0;    
 }
 
-aside .menu .home,
-aside .menu .search,
-aside .menu .library {
+aside .menu .home, aside .menu .search, aside .menu .library {
     padding: 4px 0;
 }
 
-aside .menu a span,
-aside .playlist a span,
-aside .install a span {
+aside .menu a span, aside .playlist a span, aside .install a span {
     margin-left: 5px;
 }
 
@@ -319,6 +320,8 @@ section {
     right: 5px;
     top: 50%;
     transform: translateY(-50%);
+    z-index: 3;
+    letter-spacing: 1px;
 }
 
 .upgrade button:hover {
@@ -330,6 +333,7 @@ section {
     height: calc(100vh - 70px - 70px);
     padding: 15px 15px 0 15px;
     flex-direction: column;
+    overflow: auto;
 }
 
 /* nav  */
@@ -358,7 +362,7 @@ section {
 
 /* content */
 .content {
-    overflow: scroll;
+    overflow: auto;
 }
 
 .container-row h4 {
