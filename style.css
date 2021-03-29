@@ -25,9 +25,7 @@ body {
     color: gray;
 }
 
-.hover-white:hover a,
-a:hover,
-.hover-white:hover span {
+a:hover {
     color: white;
     text-decoration: none;
 }
@@ -36,24 +34,12 @@ a:hover,
     padding: 0;
 }
 
-.padding-8{
-    padding: 8px 0;
-}
-
-.margin-btn10 {
-    margin-bottom: 10px;
-}
-
 .my-progress-bar {
     height: 5px;
     border-radius: 5px;
     background-color: gray;
     flex-grow: 1;
     position: relative;
-}
-
-.font-w-500 {
-    font-weight: 500;
 }
 
 .circle {
@@ -94,6 +80,10 @@ header .bar-side img {
 header .bar-side .title-bar-side {
     padding-left: 8px;
     flex-grow: 1;
+}
+
+header .bar-side .title-bar-side a {
+    padding: 0;
 }
 
 header .bar-side h5,
@@ -207,12 +197,20 @@ aside {
 
 }
 
+aside a, aside span {
+    font-weight: 500;
+}
+
 aside .container-icon {
     width: 30px;
 }
 
 aside .container-icon svg {
     width: 100%;
+}
+
+aside .playlist > a {
+    padding: 8px 0;
 }
 
 aside .download .container-icon {
@@ -341,10 +339,10 @@ section {
 .my-navbar ul {
     text-align: center;
     margin: 0;
+    padding: 0;
 }
 
 .my-navbar ul li {
-    /* margin: 0 5px; */
     padding: 5px;
     display: inline-block;
     vertical-align: top;
@@ -362,8 +360,13 @@ section {
     overflow: scroll;
 }
 
-.content h4 {
-    margin: 15px 0;
+.container-row h4 {
+    /* margin: 15px 0; */
+    margin-bottom: 0;
+}
+
+.container-row p {
+    margin: 0;
 }
 
 /* row */
@@ -376,6 +379,7 @@ section {
     flex-wrap: wrap;
     margin-left: -5px;
     margin-right: -5px;
+    margin-top: 10px;
 }
 
 .content .my-row .card {
@@ -409,7 +413,7 @@ section {
     margin-bottom: 0;
 }
 
-.hover-card:hover .hover-play {
+.content-card:hover .hover-play {
     display: block;
 }
 
@@ -422,9 +426,11 @@ section {
     display: none;
 }
 
-.hover-play i {
+.hover-play button {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    background-color: transparent;
+    border: none;
 }
