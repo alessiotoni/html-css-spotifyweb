@@ -334,6 +334,7 @@ section {
     padding: 15px 15px 0 15px;
     flex-direction: column;
     overflow: auto;
+
 }
 
 /* nav  */
@@ -363,6 +364,7 @@ section {
 /* content */
 .content {
     overflow: auto;
+    min-height: 100px;
 }
 
 .container-row h4 {
